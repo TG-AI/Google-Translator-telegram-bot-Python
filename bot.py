@@ -198,9 +198,6 @@ def cancel(update, context):
 	''' to cancel the conversation'''
 	update.message.reply_text('Thank you! I hope we can talk again some day.\n')
 	return ConversationHandler.END
-def echo(update, context):
-	''' echo if any one cancel the conversation and send text to be translated'''
-    context.bot.send_message(chat_id=update.effective_chat.id, text="Please send /start to start conversation")
 def error(update, context):
     """Log Errors caused by Updates."""
     logger.warning('Update "%s" caused error "%s"', update, context.error)
